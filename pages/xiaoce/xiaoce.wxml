@@ -1,0 +1,4 @@
+<view class='lists'>
+	<xiaoceItem list='{{xiaoceList}}' />
+</view>
+

@@ -1,0 +1,23 @@
+<import src="./../../wxParse/wxParse.wxml" />
+<wxs module="filter" src="./../../filter/filter.wxs" />
+<view class="container">
+	<view class="content">
+		<view class='user'>
+			<view class='avatar' catchtap='toPersonal'>
+				<jImage mode='aspectFill' src='{{(postInfo.user && postInfo.user.avatarLarge) || "/img/default_avatar.png"}}' />
+				<!-- <image mode='aspectFill' src='{{(postInfo.user && postInfo.user.avatarLarge) || "/img/default_avatar.png"}}' /> -->
+			</view>
+			<view class='info'>
+				<view class='name'>{{postInfo.user && postInfo.user.username}}</view>
+				<view class='others'>
+					<text class='time'>{{filter.timeTransform(postInfo.createdAt)}}</text>
+					<text>阅读 {{postInfo.viewsCount}}</text>
+				</view>
+			</view>
+		</view>
+		<view class='title'>{{postInfo.title}}</view>
+		<!-- 模板加载HTML页面 -->
+		<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+	</view>
+</view>
+

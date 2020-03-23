@@ -1,0 +1,9 @@
+<!-- components/mineCell/mineCell.wxml -->
+<view class="item" catch:tap="onMineCell" hover-class="hover-class">
+	<view class="title">
+		<image wx:if="{{imgSrc}}" src="{{imgSrc}}" />
+		<view>{{mainTitle}}</view>
+	</view>
+	<view class="count reddot">{{subTitle}}</view>
+</view>
+

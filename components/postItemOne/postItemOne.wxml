@@ -1,0 +1,12 @@
+<wxs module='filters' src='../../filter/filter.wxs' />
+<view class="item" hover-class='hover-class' data-item='{{item}}' catchtap='toArticleDetail'>
+  <view class='content'>
+    <view class='title'>{{item.title}}</view>
+    <view class='labels'>
+      <text>
+        {{item.collectionCount}}人喜欢 · {{item.user.username}} · {{filters.timeTransform(item.createdAt)}}
+      </text>
+    </view>
+  </view>
+  <jImage mode='aspectFill' class='inset' src='{{item.screenshot}}' wx:if='{{item.screenshot}}' />
+</view>

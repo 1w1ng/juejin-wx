@@ -1,0 +1,34 @@
+<view class='container'>
+	<view class='content'>
+		<view class='card items' wx:if='{{auth}}'>
+			<view class='item'>
+				<view class='title'>
+					<view>邮箱</view>
+				</view>
+				<view class='count'>{{userInfo.email}}</view>
+			</view>
+			<view class='item' wx:if='{{auth}}'>
+				<view class='title'>
+					<view>手机号</view>
+				</view>
+				<view class='count'>{{userInfo.mobilePhoneNumber}}</view>
+			</view>
+		</view>
+		<view class='card items'>
+			<view class='item' catchtap='clearStorage'>
+				<view class='title'>
+					<view>清除缓存数据</view>
+				</view>
+			</view>
+		</view>
+		<view class='card items' wx:if='{{auth}}'>
+			<view class='item signout' catchtap='signout'>
+				<view class='title'>
+					<view>退出登录</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='footer'>开发者 · wing</view>
+</view>
+

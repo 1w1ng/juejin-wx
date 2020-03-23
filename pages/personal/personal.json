@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人主页",
+  "usingComponents": {
+    "jImage": "/components/jImage/jImage",
+    "mine-cell": "/components/mineCell/mineCell"
+  }
+}

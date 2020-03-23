@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我喜欢的",
+  "usingComponents": {
+    "hotItem": "/components/postItemOne/postItemOne"
+  }
+}

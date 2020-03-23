@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小册",
+  "usingComponents": {
+    "jImage": "/components/jImage/jImage"
+  }
+}

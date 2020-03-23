@@ -1,0 +1,16 @@
+<view class='wrapper'>
+	<view class='top'>
+		<view class='logo'>
+			<image src='/img/ic_login_logo.png' />
+		</view>
+		<form class='form' bindsubmit='commit'>
+			<view class="input">
+				<input name='phoneNumber' placeholder='手机号/邮箱' focus></input>
+				<input name='password' placeholder='密码' password='true' />
+			</view>
+			<button class='login' formType='submit'>登录</button>
+		</form>
+	</view>
+	<view class='footer'>掘金·juejin.im</view>
+</view>
+

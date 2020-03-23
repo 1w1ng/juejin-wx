@@ -1,0 +1,4 @@
+<view class='container' wx:if='{{list.length}}'>
+	<hotItem item='{{item}}' wx:for='{{list}}' wx:key='{{index}}' />
+</view>
+

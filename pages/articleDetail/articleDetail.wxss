@@ -1,0 +1,60 @@
+@import "/wxParse/wxParse.wxss";
+.container {
+  background: #fff;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}
+.container .content {
+  padding: 30rpx 30rpx 0;
+}
+.title {
+  font-size: 48rpx;
+  margin: 32rpx 0;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.ori,
+.href {
+  font-size: 22rpx;
+  color: #999;
+}
+.ori text {
+  line-height: 1em;
+  display: inline-block;
+  padding: 6rpx 12rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #999;
+}
+.href text {
+  color: #819dba;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user .name {
+  font-weight: 700;
+}
+.user .avatar,
+.user .avatar image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.user .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+.others {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.others .time {
+  color: red;
+  margin-right: 12rpx;
+}

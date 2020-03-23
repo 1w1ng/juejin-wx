@@ -1,0 +1,74 @@
+<wxs module="filter" src="./../../filter/filter.wxs" />
+<view class="wrapper">
+	<!-- 第一部分 -->
+	<view class='card profile' catchtap='onMineCell' data-url='/pages/personal/personal'>
+		<view class='info'>
+			<!-- 头像 -->
+			<image class='avatar' src='{{filter.getImageUrlPrefix(userInfo.avatarLarge)}}' wx:if='{{userInfo.avatarLarge}}' />
+			<image class='avatar' src='/img/empty_avatar_user.png' wx:else></image>
+			<view class='text'>
+				<view class='name'>{{userInfo.username || '登录/注册'}}</view>
+				<view>{{userInfo.jobTitle || '添加职位'}} @ {{userInfo.company || '添加公司'}}</view>
+			</view>
+		</view>
+		<view class='more'>
+			<image src='/img/profile_arrow.png' />
+		</view>
+	</view>
+	<!-- 第二部分 -->
+	<view class='card items'>
+		<!-- <mine-cell
+		 imgSrc='/img/ic_notification.png'
+		 mainTitle='消息中心'
+		 subTitle='{{userNotifyNum || null}}'
+		 reddot="{{filter.getNotifyNum(userNotifyNum)}}"
+		 data-url='/pages/infoCenter/infoCenter'
+		 bind:onMineCell='onMineCell'
+		/> -->
+		<mine-cell
+		 imgSrc='/img/ic_heart_entry_bottom_full.png'
+		 mainTitle='我喜欢的'
+		 subTitle='{{userInfo.collectedEntriesCount || 0}}篇'
+		 data-url='/pages/favorate/favorate'
+		 bind:onMineCell='onMineCell'
+		/>
+		<mine-cell
+		 imgSrc='/img/ic_collection_set.png'
+		 mainTitle='收藏集'
+		 subTitle='{{userInfo.collectionSetCount || 0}}个'
+		 data-url='/pages/collectionSet/collectionSet'
+		 bind:onMineCell='onMineCell'
+		/>
+		<mine-cell
+		 imgSrc='/img/tag.png'
+		 mainTitle='标签管理'
+		 subTitle='{{userInfo.subscribedTagsCount || 0}}个'
+		 data-url='/pages/subscribedTag/subscribedTag'
+		 bind:onMineCell='onMineCell'
+		/>
+	</view>
+	<view class="card item">
+		<mine-cell
+		 imgSrc='/img/user_buy.png'
+		 mainTitle='已购小册'
+		 subTitle='{{userInfo.purchasedBookletCount || 0}}本'
+		 bind:onMineCell='onMineCell'
+		/>
+		<mine-cell
+		 imgSrc='/img/view.png'
+		 mainTitle='阅读过的文章'
+		 subTitle='{{userInfo.viewedEntriesCount || 0}}篇'
+		 bind:onMineCell='onMineCell'
+		/>
+	</view>
+	<view class="card item">
+		<mine-cell
+		 imgSrc='/img/settings.png'
+		 mainTitle='设置'
+		 data-url='/pages/setting/setting'
+		 data-open='true'
+		 bind:onMineCell='onMineCell'
+		/>
+	</view>
+</view>
+

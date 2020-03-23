@@ -1,0 +1,8 @@
+<!-- index.wxml -->
+<view class="container">
+	<!-- 推荐的内容 -->
+	<view class="timeline">
+		<homeItem item='{{item}}' wx:for='{{timeline}}' wx:key='index' />
+	</view>
+</view>
+

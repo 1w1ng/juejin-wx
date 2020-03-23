@@ -1,0 +1,50 @@
+<view class='wrapper'>
+	<view class='card profile'>
+		<view class='info'>
+			<jImage
+			 class='avatar'
+			 mode='aspectFill'
+			 src='{{userInfo.avatarLarge}}'
+			 wx:if='{{userInfo.avatarLarge}}'
+			/>
+			<image class='avatar' src='/img/empty_avatar_user.png' wx:else></image>
+			<view class='text'>
+				<view class='name'>{{userInfo.username}}</view>
+				<view class='jobtitle'>{{userInfo.jobTitle}}</view>
+				<view class='others'>{{userInfo.selfDescription }}</view>
+			</view>
+		</view>
+		<view class='bottom'>
+			<view class='l'>
+				<view class='action'>
+					<view>{{userInfo.followeesCount}}</view>
+					<view class='key'>关注</view>
+				</view>
+				<view class='action'>
+					<view>{{userInfo.followersCount}}</view>
+					<view class='key'>关注者</view>
+				</view>
+			</view>
+			<!-- <view class='edit'>编辑</view> -->
+			<image src='/img/ic_dynamic_vote.png' class='trend' catchtap='showDataTrend' />
+		</view>
+	</view>
+	<view class='card items'>
+		<mine-cell mainTitle='动态' data-url='/pages/dynamic/dynamic' bind:onMineCell='onMineCell' />
+	</view>
+	<view class='card items'>
+		<mine-cell
+		 mainTitle='喜欢的文章'
+		 subTitle='{{userInfo.collectedEntriesCount || 0}}'
+		 data-url='/pages/favorate/favorate'
+		 bind:onMineCell='onMineCell'
+		/>
+		<mine-cell
+		 mainTitle='关注的标签'
+		 subTitle='{{userInfo.subscribedTagsCount || 0}}'
+		 data-url='/pages/subscribedTag/subscribedTag'
+		 bind:onMineCell='onMineCell'
+		/>
+	</view>
+</view>
+
